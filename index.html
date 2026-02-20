@@ -7,21 +7,21 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
-    --primary: #1a0f00;
-    --primary2: #2a1800;
+    --primary: #0a2540;
+    --primary2: #0d3b6e;
     --accent: #ff6d00;
     --accent2: #ff9100;
     --accent3: #ffab40;
-    --light: #fff8f0;
-    --text: #2a1800;
-    --muted: #7a5c3a;
+    --light: #f0f7ff;
+    --text: #0a2540;
+    --muted: #6b7a99;
   }
   html { scroll-behavior: smooth; }
   body { font-family: 'Segoe UI', sans-serif; color: var(--text); background: #fff; }
 
   nav {
     position: fixed; top: 0; width: 100%; z-index: 100;
-    background: rgba(26,15,0,0.97); backdrop-filter: blur(8px);
+    background: rgba(10,37,64,0.97); backdrop-filter: blur(8px);
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 5%; height: 68px;
   }
@@ -44,7 +44,7 @@
 
   .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #1a0f00 0%, #2a1800 50%, #1a0f00 100%);
+    background: linear-gradient(135deg, #0a2540 0%, #0d3b6e 50%, #0a2540 100%);
     display: flex; align-items: center; padding: 0 5%; position: relative; overflow: hidden;
   }
   .hero::before {
@@ -537,7 +537,7 @@ async function submitForm(btn) {
       body: JSON.stringify(data)
     });
     if (res.ok) {
-      btn.textContent = ' Message Sent!';
+      btn.textContent = '✅ Message Sent!';
       form.querySelectorAll('input, textarea').forEach(el => el.value = '');
     } else {
       btn.textContent = 'Send Message →'; btn.disabled = false;
